@@ -1,0 +1,60 @@
+body{
+    overflow-x: hidden;
+}
+
+thead{
+    background-color: rgb(75, 75, 85);
+    color: seashell;
+}
+table{
+    margin-top: 20px;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.allbutton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    justify-content: space-around;
+}
+.frombutton{
+
+   text-align: center;
+   align-items: center;
+   /* display: flex;
+   justify-content: center;
+   justify-content: space-between;
+   justify-content: space-around; */
+}
+.editfrom{
+    margin-top: 100px;
+    border-radius: 5px;
+    background-color: rgb(86, 92, 92);
+    height: 430px;
+}
+.from{
+    margin-top: 50px;
+    padding-top: 12px;
+    text-align: center;
+    color: wheat;
+}
+.img{
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+.imageupload{
+    color: seashell;
+}
+/* .showbtn {
+    margin-left: 410px;
+}
+.resetbtn{
+    margin-left: 100px;
+}
+.addbtn{
+    margin-left: 100px;
+} */

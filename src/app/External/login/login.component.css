@@ -1,0 +1,274 @@
+
+
+html,body {
+    /* margin: 0; */
+    color: #6a6f8c;
+  /*  background: #02AAB0;  /* fallback for old browsers */
+  /*  background: -webkit-linear-gradient(to right, #00CDAC, #02AAB0);  /* Chrome 10-25, Safari 5.1-6 */
+   /* background: linear-gradient(to right, #00CDAC, #02AAB0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    /* background-color: #fffdfd;  */
+     /* background: #b8b5b5;   */
+     /* background-image: url('https://images.pexels.com/photos/4050323/pexels-photo-4050323.jpeg?cs=srgb&dl=pexels-vlada-karpovich-4050323.jpg&fm=jpg');  */
+      /* background-image: url('../../assets/image7.jpeg');  */
+     /* background-repeat: no-repeat;    */
+
+     background-image: url("https://thumbs.dreamstime.com/b/rocky-heart-dark-background-volcanic-rocks-heart-shaped-white-stone-dark-volcanic-rocks-background-copy-space-seen-192279685.jpg");
+     object-fit: cover;
+     background-size: contain!important;
+     background-size: contain; 
+     font: 600 16px/18px 'Open Sans', sans-serif;
+     /* width: 100%; */
+     height: 700px;
+     overflow:hidden; 
+     /* margin-top: -10px;
+     margin-left: -10px;
+     margin-right: -10px;
+     margin-bottom: -10px;
+     overflow-y: hidden!important; */
+}
+:host ::ng-deep #phone {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 48px;
+    width: 353px;
+    border: none;
+    border-radius: 50px;
+    margin-left:2px ;
+     background-color: rgba(167, 135, 135, 0.1) ;
+    /* color: white; */
+    outline: none;
+     opacity: 1.8; 
+
+     
+    
+
+}
+span{
+    color: rgb(236, 99, 99)!important;
+}
+
+
+.login-box {
+    width: 100%;
+    margin: auto;
+    max-width: 525px;
+    min-height: 550px;
+    position: relative;
+    background: url(https://images.unsplash.com/photo-1507208773393-40d9fc670acf?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1268&q=80) no-repeat center;
+    box-shadow: 0 12px 15px 0 rgba(0, 0, 0, .24), 0 17px 50px 0 rgba(0, 0, 0, .19)
+}
+
+.login-snip {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 90px 70px 50px 70px;
+    /* background: rgba(246, 250, 250, 0.9) */
+    background-color: #FFDEE9;
+    background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+}
+
+.login-snip .login,
+.login-snip .sign-up-form {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    /* transform: rotateY(180deg);
+    backface-visibility: hidden; */
+    transition: all .4s linear
+}
+
+.login-snip .sign-in,
+.login-snip .sign-up,
+.login-space .group .check {
+    display: none
+}
+
+.login-snip .tab,
+.login-space .group .label,
+.login-space .group .button {
+    text-transform: uppercase
+}
+
+.login-snip .tab {
+    font-size: 22px;
+    margin-right: 50px;
+    padding-bottom: 5px;
+    margin: 0 15px 10px 0;
+    display: inline-block;
+    border-bottom: 2px solid transparent
+}
+
+.login-snip .sign-in:checked+.tab,
+.login-snip .sign-up:checked+.tab {
+    color: rgb(24, 23, 23);
+    border-color: #959eaf
+}
+
+.login-space {
+    min-height: 345px;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d
+}
+
+.login-space .group {
+    margin-bottom: 15px
+}
+
+.login-space .group .label,
+.login-space .group .input,
+.login-space .group .button {
+    width: 100%;
+    color: rgb(94, 91, 91);
+    display: block
+}
+
+.login-space .group .input,
+.login-space .group .button {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 25px;
+    background: rgba(167, 135, 135, 0.1)
+}
+
+.login-space .group input[data-type="password"] {
+    /* text-security: circle; */
+    -webkit-text-security: circle
+}
+
+.login-space .group .label {
+    color: rgb(53, 52, 52);
+    font-size: 12px
+}
+
+.login-space .group .button {
+    background: #aab4c5
+}
+
+.login-space .group label .icon {
+    width: 15px;
+    height: 15px;
+    border-radius: 2px;
+    position: relative;
+    display: inline-block;
+    background: rgba(255, 255, 255, .1)
+}
+
+.login-space .group label .icon:before,
+.login-space .group label .icon:after {
+    content: '';
+    width: 10px;
+    height: 2px;
+    background: rgb(36, 34, 34);
+    position: absolute;
+    transition: all .2s ease-in-out 0s
+}
+
+.login-space .group label .icon:before {
+    left: 3px;
+    width: 5px;
+    bottom: 6px;
+    transform: scale(0) rotate(0)
+}
+
+.login-space .group label .icon:after {
+    top: 6px;
+    right: 0;
+    transform: scale(0) rotate(0)
+}
+
+.login-space .group .check:checked+label {
+    color:  #6b7583
+}
+
+.login-space .group .check:checked+label .icon {
+    background: rgb(151, 145, 145)
+}
+
+.login-space .group .check:checked+label .icon:before {
+    transform: scale(1) rotate(45deg)
+}
+
+.login-space .group .check:checked+label .icon:after {
+    transform: scale(1) rotate(-45deg)
+}
+
+.login-snip .sign-in:checked+.tab+.sign-up+.tab+.login-space .login {
+    transform: rotate(0)
+}
+
+.login-snip .sign-up:checked+.tab+.login-space .sign-up-form {
+    transform: rotate(0)
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box
+}
+
+.clearfix:after,
+.clearfix:before {
+    content: '';
+    display: table
+}
+
+.clearfix:after {
+    clear: both;
+    display: block
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.hr {
+    height: 2px;
+    margin: 60px 0 50px 0;
+    margin-top: 8px!important;
+    background: rgba(221, 135, 135, 0.2)
+}
+
+.foot {
+    text-align: center;
+    margin-top: -25px;
+}
+
+.card {
+    width: 500px;
+    left: 100px
+}
+
+::placeholder {
+    color: #777171
+}
+
+.tab{
+    margin-left: 130px!important;
+    margin-top: -100px!important;
+    color: beige;
+    
+}
+
+
+@media only screen and (max-width: 600px) {
+    .fromtab{
+        margin-left: -465px!important;
+        width: 300px;
+        height: 700px;
+    }
+    .login-box{
+        width: 53vh;
+        height: 80vh;
+       
+    }
+    .tab{
+        /* margin-left: -40px!important; */
+        margin-left: 60px!important;
+        
+    }
+   
+}

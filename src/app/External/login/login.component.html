@@ -1,0 +1,65 @@
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple">
+<p style="font-size: 20px; color: rgb(253, 247, 247)">Loading...</p>
+</ngx-spinner>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+        <div class="fromtab">
+            <div class="card" style="margin-top: 15px; margin-left: 300px; margin-bottom: 20px; margin-top: 50px; border-radius: 15px!important; box-shadow: rosybrown;">
+                <div class="login-box">
+                    <div class="login-snip"> <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" >Sign In</label><br><br> 
+                        <div class="login-space">
+                            <div class="login">
+
+                                <form [formGroup] = 'StudentForm' (ngSubmit)="onSubmit()"> 
+
+                                <div class="group"> <label for="user" class="label">Username</label> <input id="user" type="text" class="input" formControlName="email" placeholder="Enter your username"> </div>
+                                
+                                <span *ngIf="StudentForm.controls.email.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Email is required</span>
+                                <span *ngIf="StudentForm.controls.email.errors?.pattern"style="color: rgb(49, 48, 48);">Please, enter valid email address.</span>
+
+
+                                <div class="group"> <label for="pass" class="label">Password</label> <input id="pass" type="password" class="input"  formControlName="password" data-type="password" placeholder="Enter your password"> </div>
+                                
+                                <span *ngIf="StudentForm.controls.password.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Password is required</span>
+                                <span *ngIf="StudentForm.controls.password.errors?.pattern"style="color: rgb(49, 48, 48);">Password atleast one uppercase , special character and number and minimum 8 character</span>
+
+                                
+                                <div class="group"> <input id="check" type="checkbox" class="check" checked> <label for="check"><span class="icon"></span> Keep me Signed in</label> </div>
+                                <div class="group"> <input type="submit" class="button" value="Sign In"> </div>
+                                <div class="hr"></div>
+                                <div class="foot"> <a href="#">Forgot Password?</a> </div>
+                                <br><br><br>
+                                
+                                <div class="foot"> <label for="tab-1">Don't Have Account ? </label><a routerLink="/signup" style="color: #aab4c5;"> Sign-Up</a> </div>
+                              </form>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+       
+    
+</body>
+</html>
+

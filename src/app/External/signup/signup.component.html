@@ -1,0 +1,109 @@
+<ngx-spinner
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+type="ball-scale-multiple">
+<p style="font-size: 20px; color: rgb(253, 247, 247)">Loading...</p>
+</ngx-spinner>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+  
+        <div class="fromtab">
+            <div class="card" style="margin-top: 15px; margin-left: 300px; margin-bottom: 20px; margin-top: 50px;">
+                <div class="login-box">
+                    <div class="login-snip"> 
+                        <!-- <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>  -->
+                        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab" >Sign Up</label> <br><br>
+                        <div class="login-space">
+                           
+                             <div class="sign-up-form">
+                                 <form [formGroup] = 'StudentForm' (ngSubmit)="onSubmit()"> 
+                                     
+                                <div class="group"> <label for="user" class="label">Firstname</label> <input  type="text" class="input" formControlName="first_name"placeholder="Enter your firstname"> </div>
+        
+                                <span *ngIf="StudentForm.controls.first_name.errors?.required && submitted "style="color: rgb(49, 48, 48);">*First name is required</span>
+                                <!-- <span *ngIf="StudentForm.controls.first_name.errors?.minlength"style="color: rgb(49, 48, 48);">First Name should be minimum 3 character.</span>
+                                <span *ngIf="StudentForm.controls.first_name.errors?.maxlength"style="color: rgb(49, 48, 48);">First Name should be maximum 10 character.</span> -->
+                                <span *ngIf="StudentForm.controls.first_name.errors?.pattern"style="color: rgb(49, 48, 48);">First Name should be only Alphabet.</span>
+        
+        
+        
+                                <div class="group"> <label for="user" class="label">Lastname</label> <input  type="text" class="input" formControlName="last_name"placeholder="Enter your lastname"> </div>
+        
+                                <span *ngIf="StudentForm.controls.last_name.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Last name is required</span>
+                                <!-- <span *ngIf="StudentForm.controls.last_name.errors?.minlength"style="color: rgb(49, 48, 48);">Last Name should be  minimum 3 character.</span>
+                                <span *ngIf="StudentForm.controls.last_name.errors?.maxlength"style="color: rgb(49, 48, 48);">Last Name should be maximum 15 character.</span> -->
+                                <span *ngIf="StudentForm.controls.last_name.errors?.pattern"style="color: rgb(49, 48, 48);">Last Name should be only Alphabet.</span>
+        
+                                
+                                <div class="group"> <label for="pass" class="label">Email Address</label> <input type="text" class="input" formControlName="email"placeholder="Enter your email address"> </div>
+        
+                                <span *ngIf="StudentForm.controls.email.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Email is required</span>
+                                <span *ngIf="StudentForm.controls.email.errors?.pattern"style="color: rgb(49, 48, 48);">Please, enter valid email address.</span>
+        
+        
+                                <div class="group"> <label for="pass" class="label" >Phone Number</label> 
+                                    <!-- <input type="number" class="input" formControlName="phonenumber" placeholder="Enter your Phone Number"> 
+                                </div> -->
+                                <ngx-intl-tel-input
+            
+            [preferredCountries]="[CountryISO.UnitedStates, CountryISO.UnitedKingdom]"
+            [enableAutoCountrySelect]="false"
+            [enablePlaceholder]="true"
+            [searchCountryFlag]="true"
+            [selectFirstCountry]="false"
+            [selectedCountryISO]="CountryISO.India"
+            name="phone"
+            formControlName="phone"
+        ></ngx-intl-tel-input>
+                            </div>
+                                <span *ngIf="StudentForm.controls.phone.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Phone Number is required</span>
+                                <span *ngIf="StudentForm.controls.phone.errors?.validatePhoneNumber"style="color: rgb(49, 48, 48);">Phone number should be 10 digit.</span>
+                               
+                               
+                                <div class="group"> <label for="pass" class="label">Password</label> <input type="password" class="input" data-type="password" formControlName="password" placeholder="Create your password"> </div>
+                               
+                                <span *ngIf="StudentForm.controls.password.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Password is required</span>
+                                <span *ngIf="StudentForm.controls.password.errors?.pattern"style="color: rgb(49, 48, 48);">Password atleast one uppercase , special character and number and minimum 8 character</span>
+                                
+        
+        
+                                <div class="group"> <label for="pass" class="label">Repeat Password</label> <input type="password" class="input" data-type="password" formControlName="confirmpassword" placeholder="Repeat your password"> </div>
+        
+                                <span *ngIf="StudentForm.controls.confirmpassword.errors?.required && submitted "style="color: rgb(49, 48, 48);">*Confirm Password is required</span>
+                                <span *ngIf="StudentForm.controls.confirmpassword.errors?.confirmedValidator"style="color: rgb(49, 48, 48);">Password and Confirm Password must be match.</span>
+        
+        
+        
+                                <br><br>
+                                <div class="group"> <input type="submit" class="button"  value="Sign Up"> </div>
+                                <!-- <br>
+                                <div class="group"> <input type="submit" class="button"  (click)="reset()"value="Reset"> </div> -->
+                               
+                               
+                                <div class="hr"></div>
+                                <div class="foot"> <label for="tab-1">Already Member ?</label><a href="#" routerLink="/login" style="color: #aab4c5;"> Sign-In</a> </div>
+                            </form>
+        
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    
+</body>
+</html>
+

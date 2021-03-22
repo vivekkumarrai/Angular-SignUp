@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <h3 style="text-align: center; color: cadetblue;"> <hr> Welcome to View All User Data <hr> </h3>
+    <!-- <a routerLink=""> Home </a> -->
+  </div>  <!-- <button type="submit" (click)="onSubmit()">Shows data</button>  -->
+    <div class="allbutton">
+    <!-- <button type="button" type="reset" class="btn btn-danger resetbtn" >Reset Data</button> -->
+    <button type="button" class="btn btn-info showbtn" (click)="onSubmit()">Show data</button>
+      <a  routerLink="/signup" ><button type="button" class="btn btn-success addbtn">Add user</button></a>
+    </div>
+    
+   
+     
+         <div class="row">
+             <div class="col-9 ">
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Image</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Delete</th>
+            <th scope="col">Edit</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor='let data of dbdata'>
+            <td >{{data.id}}</td> 
+            <td><img src="http://localhost:8070/uploads/{{data.profile_picture}}" class="img"></td>
+            <td>{{data.first_name}}</td>
+            <td>{{data.last_name}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.phone}}</td>
+             
+            
+            <td><button type="submit" class="btn btn-danger" (click) = "onDelete(data.id)"><i class="fa fa-trash"></i></button></td>
+            <td><button type="submit" class="btn btn-primary" (click) = "onEdit(data,data.id)"><i class="fa fa-edit" ></i></button></td>
+          </tr> 
+<!-- {{dbdata[0].id}} -->
+    </tbody>
+</table>
+
+
+
+</div>
+<div class="col-3">
+
+    <form class="editfrom">
+          <h3 class="from">Forms</h3>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="First name" name ='firstname' [(ngModel)]="firstname"> 
+          </div>
+          <br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Last name" name ='lastname' [(ngModel)]="lastname">
+          </div>
+          <br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Email" name ='email' [(ngModel)]="email">
+          </div>
+          <br>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Phone Number" name ='phone' [(ngModel)]="phone">
+          </div>
+          <br>
+          <!-- <div class="col">
+           <div class="form-group">
+            <label for="exampleFormControlFile1"class="imageupload">Profile Picture</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div> -->
+          <!-- </div> -->
+          <br> 
+          <div class="frombutton">
+          <button type="button" class="btn btn-success" (click) = "onSave()">Save</button>
+          </div>
+         
+
+        
+      </form>
+
+</div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
